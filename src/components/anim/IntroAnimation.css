@@ -1,0 +1,261 @@
+.background {
+  background: linear-gradient(
+    20deg,
+    #000000 10%,
+    #0f0f0f 30%,
+    /* Cambia este valor para hacer la transición más suave */ #131212 50%,
+    /* Añade más paradas de color para una transición más suave */ #0c0c0c 80%,
+    /* Añade más paradas de color para una transición más suave */ #000000 100%
+  );
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 30%;
+  height: 30%;
+  overflow: hidden;
+  transform: translateY(0px);
+  animation: float 2s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar vertical y horizontalmente */
+}
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.container h2 {
+  color: white;
+  margin: 0rem;
+  font-size: 54px;
+}
+.container span {
+  color: white;
+  margin: 0rem;
+  font-size: 18px;
+}
+.content {
+  margin: 5%;
+}
+.content__container span {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  line-height: 35px; /* Igual al tamaño de fuente para centrar verticalmente */
+  display: inline-block; /* Hacer que el span se ajuste al contenido */
+  cursor: pointer;
+}
+
+.content__container span.fade-out {
+  opacity: 0;
+}
+
+/* Animación de los corchetes [ ] */
+.content__container span::before,
+.conten.content__container span::after {
+  content: "[";
+  animation: blink 1s step-end infinite;
+  color: #16a085;
+  position: absolute;
+  top: 0;
+  left: -20px; /* Espacio ajustable a la izquierda */
+  width: auto; /* Ancho ajustable automáticamente */
+  font-size: 32px; /* Cambiar el tamaño de los corchetes */
+  line-height: 32px; /* Igual al tamaño de fuente para centrar verticalmente */
+}
+
+.content__container span::after {
+  content: "]";
+  animation: blink 1s step-end infinite;
+  color: #16a085;
+  position: absolute;
+  top: 0;
+  right: -20px; /* Espacio ajustable a la izquierda */
+  width: auto; /* Ancho ajustable automáticamente */
+  font-size: 32px; /* Cambiar el tamaño de los corchetes */
+  line-height: 32px; /* Igual al tamaño de fuente para centrar verticalmente */
+}
+
+/* Animación de cambio de palabra */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes change {
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+
+@-o-keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes change {
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+
+@-moz-keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes change {
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
+}
