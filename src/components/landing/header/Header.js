@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { resources } from "../../../assets/resources";
 import {
@@ -9,27 +9,57 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = ({ backgroundColor, sectionRefs }) => {
+  const [isHoveredFacebook, setIsHoveredFacebook] = useState(false);
+  const [isHoveredInstagram, setIsHoveredInstagram] = useState(false);
+  const [isHoveredWhatsapp, setIsHoveredWhatsapp] = useState(false);
+
   const handleNavigation = (ref) => {
     ref.current.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   };
+
   const handleClick = () => {
     window.location.href = "/Iniciar-sesion";
   };
+
   const colorFacebook =
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
   const colorWhatsapp =
-    "linear-gradient(to right, #00bb2d 0%, #00ea38 40%, #9CEC8F 100%)";
+    "linear-gradient(to right, #00bb2d 0%, #00ea38 40%, #6dd85c 100%)";
   const labelYouGym = "linear-gradient(to right, #B03535 0%, #201F1F 50%)";
   const colorInstagram =
     "linear-gradient(to right, #A12AC4 0%, #ED586C 40%, #F0A853 100%)";
+
   const linkFacebook = () => {
-    window.open("https://www.facebook.com/BlueCodeFullStack", "_blank"); // URL de la página de Facebook que deseas redireccionar
+    window.open("https://www.facebook.com/BlueCodeFullStack", "_blank");
   };
+
   const linkInstagram = () => {
-    window.open("https://www.instagram.com/bluecode_full_stack/", "_blank"); // URL de la página de Facebook que deseas redireccionar
+    window.open("https://www.instagram.com/bluecode_full_stack/", "_blank");
+  };
+
+  const handleFacebookMouseEnter = () => {
+    setIsHoveredFacebook(true);
+  };
+
+  const handleFacebookMouseLeave = () => {
+    setIsHoveredFacebook(false);
+  };
+  const handleInstagramMouseEnter = () => {
+    setIsHoveredInstagram(true);
+  };
+
+  const handleInstagrampMouseLeave = () => {
+    setIsHoveredInstagram(false);
+  };
+  const handleWhatsAppMouseEnter = () => {
+    setIsHoveredWhatsapp(true);
+  };
+
+  const handleWhatsAppMouseLeave = () => {
+    setIsHoveredWhatsapp(false);
   };
   return (
     <div
@@ -52,49 +82,90 @@ const Header = ({ backgroundColor, sectionRefs }) => {
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[0])}
+            onClick={() => handleNavigation(sectionRefs[1])}
           >
             Producto
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[0])}
+            onClick={() => handleNavigation(sectionRefs[2])}
           >
             Servicios
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[0])}
+            onClick={() => handleNavigation(sectionRefs[3])}
           >
             Ofertas
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[0])}
+            onClick={() => handleNavigation(sectionRefs[4])}
           >
             Foro
           </span>
           <div className="header-container__menu__divider" />
         </div>
         <div className="header-container__menu__social">
-          <div className="header-container__menu__social__item">
+          <div
+            className="header-container__menu__social__item"
+            onMouseEnter={handleFacebookMouseEnter}
+            onMouseLeave={handleFacebookMouseLeave}
+            style={{
+              background: isHoveredFacebook
+                ? colorFacebook
+                : "rgba(255, 255, 255, 0.2)",
+            }}
+          >
             <div
               className="header-container__menu__social__item__button"
-              style={{ color: colorFacebook }}
               onClick={linkFacebook}
             >
               <FontAwesomeIcon icon={faFacebook} />
             </div>
           </div>
-          <div className="header-container__menu__social__item">
-            <FontAwesomeIcon icon={faInstagram} />
+          <div
+            className="header-container__menu__social__item"
+            onMouseEnter={handleInstagramMouseEnter}
+            onMouseLeave={handleInstagrampMouseLeave}
+            style={{
+              background: isHoveredInstagram
+                ? colorInstagram
+                : "rgba(255, 255, 255, 0.2)",
+            }}
+          >
+            <div
+              className="header-container__menu__social__item__button"
+              onClick={linkInstagram}
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </div>
           </div>
-          <div className="header-container__menu__social__item">
-            <FontAwesomeIcon icon={faWhatsapp} />
+          <div
+            className="header-container__menu__social__item"
+            onMouseEnter={handleWhatsAppMouseEnter}
+            onMouseLeave={handleWhatsAppMouseLeave}
+            style={{
+              background: isHoveredWhatsapp
+                ? colorWhatsapp
+                : "rgba(255, 255, 255, 0.2)",
+            }}
+          >
+            <div
+              className="header-container__menu__social__item__button"
+              onClick={linkFacebook}
+            >
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </div>
           </div>
+        </div>
+        <div className="header-container__menu__login">
+          <button className="glow-on-hover" type="button">
+            Ingresar
+          </button>
         </div>
       </div>
     </div>
