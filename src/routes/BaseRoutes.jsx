@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { Route, Routes, useLocation } from "react-router-dom";
 
 const IntroAnimation = lazy(() => import('../components/anim/IntroAnimation'));
-const LandingPage = lazy(() => import('../pages/LandingPage'));
+const LandingPage = lazy(() => import('../components/landing/LandingPage'));
 const LayoutAuth = lazy(() => import('../components/auth/LayoutAuth'));
 const LayoutDasboard = lazy(() => import('../components/dashboard/LayoutDasboard'));
 

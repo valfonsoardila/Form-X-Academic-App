@@ -1,0 +1,7 @@
+.maincontainer{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}

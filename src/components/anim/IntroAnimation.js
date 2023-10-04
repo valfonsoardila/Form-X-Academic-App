@@ -38,7 +38,7 @@ const IntroAnimation = () => {
         </div>
         <h2>X Academic</h2>
         <span>La mejor forma de entender tus ideas</span>
-        <div class="content">
+        <div className="content">
           <div className="content__container">
           <span className={`transition ${isTransitioning ? "fade-out" : ""}`} onClick={handleOnClick}>
               {currentWord}

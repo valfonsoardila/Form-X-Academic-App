@@ -1,7 +1,7 @@
 import BaseRoutes from "./routes/BaseRoutes";
 import { Suspense } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
-import LoadingPage from "./components/UlElements/LoadingPage";
+import LoadingPage from "./components/UlElements/LoadPage/LoadingPage";
 import "./App.css";
 
 function App() {

@@ -3,7 +3,7 @@ import "./LoadingPage.css";
 
 const LoadingPage = () => {
   return (
-    <div className="background">
+    <div className="container">
       <div className="infinity-loader">
         <div className="bg">
           {/* background circles */}

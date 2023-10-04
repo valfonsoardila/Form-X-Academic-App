@@ -3,7 +3,7 @@
     border-width = 10px
     time = 1s
 */
-.background {
+.container {
   background: linear-gradient(
     20deg,
     #000000 10%,
@@ -12,6 +12,9 @@
     /* Añade más paradas de color para una transición más suave */ #0c0c0c 80%,
     /* Añade más paradas de color para una transición más suave */ #000000 100%
   );
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 .infinity-loader {
   position: fixed; /*We have to use it as we are using absolute positioning on its children and we will align it in the center of the page*/
