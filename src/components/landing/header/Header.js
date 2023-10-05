@@ -28,7 +28,6 @@ const Header = ({ backgroundColor, sectionRefs }) => {
     "linear-gradient(to right, #0546A0 0%, #0546A0 40%, #663FB6 100%)";
   const colorWhatsapp =
     "linear-gradient(to right, #00bb2d 0%, #00ea38 40%, #6dd85c 100%)";
-  const labelYouGym = "linear-gradient(to right, #B03535 0%, #201F1F 50%)";
   const colorInstagram =
     "linear-gradient(to right, #A12AC4 0%, #ED586C 40%, #F0A853 100%)";
 
@@ -75,35 +74,35 @@ const Header = ({ backgroundColor, sectionRefs }) => {
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[0])}
+            onClick={() => handleNavigation(sectionRefs.sectionOneRef)}
           >
             Inicio
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[1])}
+            onClick={() => handleNavigation(sectionRefs.sectionTwoRef)}
           >
             Producto
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[2])}
+            onClick={() => handleNavigation(sectionRefs.sectionThreeRef)}
           >
             Servicios
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[3])}
+            onClick={() => handleNavigation(sectionRefs.sectionFourRef)}
           >
             Ofertas
           </span>
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs[4])}
+            onClick={() => handleNavigation(sectionRefs.sectionOneRef)}
           >
             Foro
           </span>
@@ -163,7 +162,7 @@ const Header = ({ backgroundColor, sectionRefs }) => {
           </div>
         </div>
         <div className="header-container__menu__login">
-          <button className="glow-on-hover" type="button">
+          <button className="glow-on-hover" type="button" onClick={handleClick}>
             Ingresar
           </button>
         </div>

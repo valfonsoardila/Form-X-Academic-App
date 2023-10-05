@@ -9,7 +9,7 @@
     /* Añade más paradas de color para una transición más suave */ #000000 100%
   );
   width: 100%;
-  height: 30%;
+  height: 12rem;
 }
 .footer__container {
   display: flex;
