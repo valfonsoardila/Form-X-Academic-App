@@ -33,10 +33,19 @@ const LandingPage = () => {
   return (
     <div
       className="maincontainer"
-      style={{ backgroundImage: `url(${resources.bg})` }}
+      style={{ backgroundImage: `url(${resources.bgLanding})` }}
     >
       <div className="container__landing">
-        <Header backgroundColor={headerBackground} />
+        <Header
+          backgroundColor={headerBackground}
+          sectionRefs={{
+            sectionOneRef,
+            sectionTwoRef,
+            sectionThreeRef,
+            sectionFourRef,
+            sectionFiveRef,
+          }}
+        />
         <div className="contanersections">
           <div className="sectionOne" ref={sectionOneRef}></div>
           <div className="sectionTwo" ref={sectionTwoRef}></div>

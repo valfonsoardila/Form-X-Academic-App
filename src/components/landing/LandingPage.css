@@ -18,27 +18,82 @@
   height: auto;
 }
 .sectionOne {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    20deg,
+    rgba(0, 0, 0, 0.6) 10%,
+    rgb(15, 15, 15, 0.5) 30%,
+    /* Cambia este valor para hacer la transición más suave */
+      rgba(19, 18, 18, 0.5) 50%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(12, 12, 12, 0.5) 80%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(0, 0, 0, 0.6) 100%
+  );
 }
 .sectionTwo {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    20deg,
+    rgba(17, 17, 17, 0.6) 10%,
+    rgb(15, 15, 15, 0.5) 30%,
+    /* Cambia este valor para hacer la transición más suave */
+      rgba(19, 18, 18, 0.5) 50%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(12, 12, 12, 0.5) 80%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(26, 25, 25, 0.6) 100%
+  );
 }
 .sectionThree {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    20deg,
+    rgba(0, 0, 0, 0.6) 10%,
+    rgb(15, 15, 15, 0.5) 30%,
+    /* Cambia este valor para hacer la transición más suave */
+      rgba(19, 18, 18, 0.5) 50%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(12, 12, 12, 0.5) 80%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(0, 0, 0, 0.6) 100%
+  );
 }
 .sectionFour {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    20deg,
+    rgba(17, 17, 17, 0.6) 10%,
+    rgb(15, 15, 15, 0.5) 30%,
+    /* Cambia este valor para hacer la transición más suave */
+      rgba(19, 18, 18, 0.5) 50%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(12, 12, 12, 0.5) 80%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(26, 25, 25, 0.6) 100%
+  );
 }
 .sectionFive {
   display: flex;
   width: 100%;
   height: 100vh;
+  background: linear-gradient(
+    20deg,
+    rgba(0, 0, 0, 0.6) 10%,
+    rgb(15, 15, 15, 0.5) 30%,
+    /* Cambia este valor para hacer la transición más suave */
+      rgba(19, 18, 18, 0.5) 50%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(12, 12, 12, 0.5) 80%,
+    /* Añade más paradas de color para una transición más suave */
+      rgba(0, 0, 0, 0.6) 100%
+  );
 }

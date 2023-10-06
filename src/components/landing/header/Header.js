@@ -21,7 +21,7 @@ const Header = ({ backgroundColor, sectionRefs }) => {
   };
 
   const handleClick = () => {
-    window.location.href = "/Iniciar-sesion";
+    window.location.href = "/authentication";
   };
 
   const colorFacebook =
@@ -102,7 +102,7 @@ const Header = ({ backgroundColor, sectionRefs }) => {
           <div className="header-container__menu__divider" />
           <span
             className="header-container__menu__button"
-            onClick={() => handleNavigation(sectionRefs.sectionOneRef)}
+            onClick={() => handleNavigation(sectionRefs.sectionFiveRef)}
           >
             Foro
           </span>

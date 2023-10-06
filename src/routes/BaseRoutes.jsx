@@ -4,12 +4,12 @@ import { Route, Routes, useLocation } from "react-router-dom";
 const IntroAnimation = lazy(() => import('../components/anim/IntroAnimation'));
 const LandingPage = lazy(() => import('../components/landing/LandingPage'));
 const LayoutAuth = lazy(() => import('../components/auth/LayoutAuth'));
-const LayoutDasboard = lazy(() => import('../components/dashboard/LayoutDasboard'));
+const LayoutDasboard = lazy(() => import('../components/dashboard/LayoutDashboard'));
 
 export const routes = {
   ANIM: "/",
   LANDING: "/landing",
-  AUTH: "/auth",
+  AUTH: "/authentication",
   DASHBOARD: "/dashboard",
 };
 

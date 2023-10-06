@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer__container__left">
           <div className="footer__container__left__logo">
             <img src={resources.innobyte} alt="logo" />
-            <span>© 2021 Innobyte</span>
+            <span>© 2023 Innobyte</span>
           </div>
           <div className="footer__container__left__name">
             <span>By Victor Ardila</span>
