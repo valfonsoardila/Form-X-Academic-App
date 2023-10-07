@@ -1,10 +1,13 @@
-import { lazy } from 'react';
+import { lazy } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-const IntroAnimation = lazy(() => import('../components/anim/IntroAnimation'));
-const LandingPage = lazy(() => import('../components/landing/LandingPage'));
-const LayoutAuth = lazy(() => import('../components/auth/LayoutAuth'));
-const LayoutDasboard = lazy(() => import('../components/dashboard/LayoutDashboard'));
+const IntroAnimation = lazy(() => import("../components/anim/IntroAnimation"));
+const LandingPage = lazy(() => import("../components/landing/LandingPage"));
+const LayoutAuth = lazy(() => import("../components/auth/LayoutAuth"));
+const LayoutDasboard = lazy(() =>
+  import("../components/dashboard/LayoutDashboard")
+);
+const HomePage = lazy(() => import("../pages/home/HomePage"));
 
 export const routes = {
   ANIM: "/",
@@ -22,7 +25,14 @@ const BaseRoutes = () => {
         <Route path={routes.ANIM} element={<IntroAnimation />} />
         <Route path={routes.LANDING} element={<LandingPage />} />
         <Route path={routes.AUTH} element={<LayoutAuth />} />
-        <Route path={routes.DASHBOARD} element={<LayoutDasboard />} />
+        <Route
+          path={routes.DASHBOARD}
+          element={
+            <LayoutDasboard>
+              <HomePage />
+            </LayoutDasboard>
+          }
+        />
       </Routes>
       {background && (
         <Routes>

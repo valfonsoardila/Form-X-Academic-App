@@ -17,7 +17,6 @@
 }
 .main-container-body-content{
     display: flex;
-    flex-direction: column;
     height: 98%;
     width: 98%;
     background: transparent;
