@@ -7,8 +7,6 @@ const LayoutAuth = lazy(() => import("../components/auth/LayoutAuth"));
 const LayoutDasboard = lazy(() =>
   import("../components/dashboard/LayoutDashboard")
 );
-const HomePage = lazy(() => import("../pages/home/HomePage"));
-const ProfilePage = lazy(() => import("../pages/profile/ProfilePage"));
 
 export const routes = {
   ANIM: "/",
@@ -16,9 +14,6 @@ export const routes = {
   AUTH: "/authentication",
   DASHBOARD: "/dashboard",
 };
-// export const roustesDashboard = {
-//   PROFILE: "/dashboard/profile",
-// }
 
 const BaseRoutes = () => {
   const location = useLocation();
@@ -33,7 +28,6 @@ const BaseRoutes = () => {
           path={routes.DASHBOARD}
           element={
             <LayoutDasboard>
-              {<HomePage />}
             </LayoutDasboard>
           }
         />

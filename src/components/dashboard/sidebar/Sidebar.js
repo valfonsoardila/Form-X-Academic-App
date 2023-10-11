@@ -11,9 +11,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({onComponentChange}) => {
   const [expandedData, setExpandedData] = useState(false);
   const [hover, setHover] = useState(false);
+  const handleDashboardClick = () => {
+    onComponentChange("dashboard");
+    console.log("dashboard");
+  };
+  const handleProfileClick = () => {
+    onComponentChange("profile");
+    console.log("profile");
+  };
   const changeHover = () => {
     setHover(!hover);
   };
@@ -40,8 +48,8 @@ const Sidebar = () => {
           <span>Menu</span>
         </div>
         <div className="sidebar-menu-item">
-          <FontAwesomeIcon icon={faDashboard} />
-          <span style={{ display: hover ? "flex" : "none" }}>
+          <FontAwesomeIcon icon={faDashboard} onClick={handleDashboardClick} />
+          <span style={{ display: hover ? "flex" : "none" }} onClick={handleDashboardClick}>
             Dashboard
           </span>
         </div>
@@ -77,8 +85,8 @@ const Sidebar = () => {
           </span>
         </div>
         <div className="sidebar-menu-item">
-          <FontAwesomeIcon icon={faCog} />
-          <span style={{ display: hover ? "flex" : "none" }}>Ajustes</span>
+          <FontAwesomeIcon icon={faCog} onClick={handleProfileClick}/>
+          <span style={{ display: hover ? "flex" : "none" }} onClick={handleProfileClick}>Ajustes</span>
         </div>
       </div>
       <div className="sidebar-menu-sesion">

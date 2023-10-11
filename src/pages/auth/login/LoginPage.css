@@ -48,11 +48,19 @@
     flex-direction: column;
     margin-top: auto;
   }
+  .form-group span{
+    margin-top: 1%;
+    align-self: start;
+    color: #2bd8b5;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
   .form-group label {
+    align-self: self-start;
     font-size: 20px;
     color: #fff;
     font-weight: 600;
-    margin-bottom: 10px;
   }
   .form-group svg{
     width: 18px;

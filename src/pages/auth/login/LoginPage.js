@@ -8,6 +8,9 @@ const LoginPage = ({ onComponentChange }) => {
   const handleRegisterClick = () => {
     onComponentChange("register");
   };
+  const handleForgotClick = () => {
+    onComponentChange("forgot");
+  };
     const login = () => {
     window.location.href = "/dashboard";
   };
@@ -38,6 +41,7 @@ const LoginPage = ({ onComponentChange }) => {
               name="password"
               placeholder="Password"
             />
+            <span className="forgotpassword" onClick={handleForgotClick}>Forgot password?</span>
           </div>
           <div className="form-group">
             <button type="submit" className="btn-primary" onClick={login}>
