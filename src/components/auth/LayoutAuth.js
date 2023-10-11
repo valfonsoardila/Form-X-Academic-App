@@ -6,7 +6,7 @@ import RegisterPage from "../../pages/auth/register/RegisterPage";
 import ForgotPage from "../../pages/auth/forgot/ForgotPage";
 
 const LayoutAuth = () => {
-  const [activeComponent, setActiveComponent] = useState("auth");
+  const [activeComponent, setActiveComponent] = useState("login");
   const handleComponentChange = (component) => {
     setActiveComponent(component);
   };
@@ -17,7 +17,7 @@ const LayoutAuth = () => {
     >
       <div className="blur-main">
         <div className="container">
-          {activeComponent === "auth" && (
+          {activeComponent === "login" && (
             <LoginPage onComponentChange={handleComponentChange} />
           )}
           {activeComponent === "register" && (

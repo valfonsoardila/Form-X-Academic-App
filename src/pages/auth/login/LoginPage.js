@@ -4,12 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import "./LoginPage.css";
 
-const LoginPage = () => {
-  const login = () => {
+const LoginPage = ({ onComponentChange }) => {
+  const handleRegisterClick = () => {
+    onComponentChange("register");
+  };
+    const login = () => {
     window.location.href = "/dashboard";
   };
   return (
-    <div className="maincontainer">
+    <>
       <div className="logocontainer">
         <img src={resources.logo} alt="logo" />
         <span className="logotext">XAcademic</span>
@@ -44,11 +47,11 @@ const LoginPage = () => {
         </div>
         <div className="form-footer">
           <span className="form-footer-text">
-            Don't have an account? <a href="/signup">Sign up</a>
+            Don't have an account? <span onClick={handleRegisterClick}>Sign up</span>
           </span>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
