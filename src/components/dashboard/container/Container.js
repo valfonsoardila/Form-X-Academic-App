@@ -4,16 +4,16 @@ import HomePage from "../../../pages/dashboard/home/HomePage";
 import ProfilePage from "../../../pages/dashboard/profile/ProfilePage";
 import "./Container.css";
 
-const Container = ({onComponentChange}) => {
+const Container = ({activeComponent}) => {
   return (
     <div className="main-container-content">
       <Header />
       <div className="main-container-body">
         <div className="main-container-body-content">
-          {onComponentChange === "dashboard" && (
+          {activeComponent === "dashboard" && (
             <HomePage />
           )}
-          {onComponentChange === "profile" && (
+          {activeComponent === "profile" && (
             <ProfilePage />
           )}
         </div>
