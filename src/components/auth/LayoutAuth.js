@@ -4,6 +4,7 @@ import { resources } from "../../assets/resources";
 import LoginPage from "../../pages/auth/login/LoginPage";
 import RegisterPage from "../../pages/auth/register/RegisterPage";
 import ForgotPage from "../../pages/auth/forgot/ForgotPage";
+import { motion } from "framer-motion";
 
 const LayoutAuth = () => {
   const [activeComponent, setActiveComponent] = useState("login");
@@ -16,7 +17,12 @@ const LayoutAuth = () => {
       style={{ backgroundImage: `url(${resources.bgAuth})` }}
     >
       <div className="blur-main">
-        <div className="container">
+        <motion.div
+          className="container-auth"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           {activeComponent === "login" && (
             <LoginPage onComponentChange={handleComponentChange} />
           )}
@@ -26,7 +32,7 @@ const LayoutAuth = () => {
           {activeComponent === "forgot" && (
             <ForgotPage onComponentChange={handleComponentChange} />
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

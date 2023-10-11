@@ -2,23 +2,31 @@ import React from "react";
 import Header from "../header/Header";
 import HomePage from "../../../pages/dashboard/home/HomePage";
 import ProfilePage from "../../../pages/dashboard/profile/ProfilePage";
+import { motion } from "framer-motion";
 import "./Container.css";
 
 const Container = ({activeComponent}) => {
   return (
-    <div className="main-container-content">
+    <motion.div initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.7 }}
+    className="main-container-content">
       <Header />
       <div className="main-container-body">
-        <div className="main-container-body-content">
+        <motion.div initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="main-container-body-content">
           {activeComponent === "dashboard" && (
             <HomePage />
           )}
           {activeComponent === "profile" && (
             <ProfilePage />
           )}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

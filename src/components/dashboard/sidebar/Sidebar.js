@@ -4,16 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBox,
   faBoxOpen,
-  faBusinessTime,
   faCog,
   faDashboard,
   faDoorOpen,
+  faLayerGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css";
 
-const Sidebar = ({onComponentChange}) => {
+const Sidebar = ({ onComponentChange }) => {
   const [expandedData, setExpandedData] = useState(false);
   const [hover, setHover] = useState(false);
+  
   const handleDashboardClick = () => {
     onComponentChange("dashboard");
     console.log("dashboard");
@@ -21,6 +22,9 @@ const Sidebar = ({onComponentChange}) => {
   const handleProfileClick = () => {
     onComponentChange("profile");
     console.log("profile");
+  };
+  const handleOutSesionClick = () => {
+    window.location.href = "/authentication";
   };
   const changeHover = () => {
     setHover(!hover);
@@ -49,19 +53,24 @@ const Sidebar = ({onComponentChange}) => {
         </div>
         <div className="sidebar-menu-item">
           <FontAwesomeIcon icon={faDashboard} onClick={handleDashboardClick} />
-          <span style={{ display: hover ? "flex" : "none" }} onClick={handleDashboardClick}>
+          <span
+            style={{ display: hover ? "flex" : "none" }}
+            onClick={handleDashboardClick}
+          >
             Dashboard
           </span>
         </div>
         <div className="collapsible-item" onClick={toggleExpandedData}>
-            <div className="collapsible-header">
-              <FontAwesomeIcon icon={faBusinessTime} />
-              <span style={{ display: hover ? "flex" : "none" }}>
-                Nuevo diseño
-              </span>
-            </div>
-            {expandedData && hover &&(
-              console.log("expandedData", expandedData),
+          <div className="collapsible-header">
+            <FontAwesomeIcon icon={faLayerGroup} />
+            <span style={{ display: hover ? "flex" : "none" }}>
+              Nuevo diseño
+            </span>
+          </div>
+          {expandedData &&
+            hover &&
+            (console.log("expandedData", expandedData),
+            (
               <div className="collapsible-body">
                 <div className="collapsible-body-item">
                   <FontAwesomeIcon icon={faBox} />
@@ -76,8 +85,8 @@ const Sidebar = ({onComponentChange}) => {
                   </span>
                 </div>
               </div>
-            )}
-          </div>
+            ))}
+        </div>
         <div className="sidebar-menu-item">
           <FontAwesomeIcon icon={faBoxOpen} />
           <span style={{ display: hover ? "flex" : "none" }}>
@@ -85,12 +94,20 @@ const Sidebar = ({onComponentChange}) => {
           </span>
         </div>
         <div className="sidebar-menu-item">
-          <FontAwesomeIcon icon={faCog} onClick={handleProfileClick}/>
-          <span style={{ display: hover ? "flex" : "none" }} onClick={handleProfileClick}>Ajustes</span>
+          <FontAwesomeIcon icon={faCog} onClick={handleProfileClick} />
+          <span
+            style={{ display: hover ? "flex" : "none" }}
+            onClick={handleProfileClick}
+          >
+            Ajustes
+          </span>
         </div>
       </div>
       <div className="sidebar-menu-sesion">
-        <div className="sidebar-menu-item-sesion">
+        <div
+          className="sidebar-menu-item-sesion"
+          onClick={handleOutSesionClick}
+        >
           <FontAwesomeIcon icon={faDoorOpen} />
           <span style={{ display: hover ? "flex" : "none" }}>
             Cerrar Sesion

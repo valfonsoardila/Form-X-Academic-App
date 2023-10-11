@@ -8,13 +8,14 @@ import {
   faLanguage,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [openHeader, setOpenHeader] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
   const changeOpenSearch = () => {
     setOpenSearch(!openSearch);
-  }
+  };
   const changeOpenHeader = () => {
     setOpenHeader(!openHeader);
   };
@@ -35,14 +36,29 @@ const Header = () => {
         onClick={changeOpenHeader}
         style={{ display: openHeader ? "block" : "none" }}
       />
-      <div className="header" style={{ display: openHeader ? "flex" : "none" }}>
+      <motion.div
+        initial={{ opacity: 0, scaleY: 0 }}
+        animate={{ opacity: 1, scaleY: openHeader ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
+        className="header"
+        style={{ display: openHeader ? "flex" : "none" }}
+      >
         <div className="header-title">
           <h1>Mi nombre</h1>
         </div>
         <div className="header-body">
-          <div className="header-container-search" style={{ width: openSearch ? "fit-content" : "24%" }}>
-            <div className="header-body-search">
-              <input type="text" placeholder="Buscar" style={{ display: openSearch ? "none" : "flex" }} />
+          <div
+            className="header-container-search"
+            style={{ width: openSearch ? "fit-content" : "24%" }}
+          >
+            <div
+              className="header-body-search"
+            >
+              <input
+                type="text"
+                placeholder="Buscar"
+                style={{ display: openSearch ? "none" : "flex" }}
+              />
               <FontAwesomeIcon icon={faSearch} onClick={changeOpenSearch} />
             </div>
           </div>
@@ -53,7 +69,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faBell} />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
