@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./HomePage.css";
 import * as echarts from "echarts";
 
@@ -74,7 +74,7 @@ const HomePage = () => {
     <div className="home-page">
       <div className="columnOne">
         <div className="columnOne-rowOne">
-        <div id="chart" className="chart-lineal"></div>
+          <div id="chart" className="chart-lineal"/>
         </div>
         <div className="columnOne-rowTwo"></div>
       </div>

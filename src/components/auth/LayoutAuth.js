@@ -1,5 +1,7 @@
 import React from "react";
 import { resources } from "../../assets/resources";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import "./LayoutAuth.css";
 
 const LayoutAuth = () => {
@@ -21,7 +23,10 @@ const LayoutAuth = () => {
           <div className="formcontainer">
             <div className="form">
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -30,7 +35,10 @@ const LayoutAuth = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">
+                  <FontAwesomeIcon icon={faKey} />
+                  Password
+                </label>
                 <input
                   type="password"
                   id="password"
@@ -39,11 +47,7 @@ const LayoutAuth = () => {
                 />
               </div>
               <div className="form-group">
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  onClick={login}
-                >
+                <button type="submit" className="btn-primary" onClick={login}>
                   Login
                 </button>
               </div>

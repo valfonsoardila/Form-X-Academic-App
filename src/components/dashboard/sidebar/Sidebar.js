@@ -6,6 +6,7 @@ import {
   faBoxOpen,
   faBusinessTime,
   faCog,
+  faDashboard,
   faDoorOpen,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css";
@@ -18,6 +19,7 @@ const Sidebar = () => {
   };
   const toggleExpandedData = () => {
     setExpandedData(!expandedData);
+    console.log(expandedData);
   };
   return (
     <div
@@ -37,6 +39,12 @@ const Sidebar = () => {
         <div className="sidebar-title">
           <span>Menu</span>
         </div>
+        <div className="sidebar-menu-item">
+          <FontAwesomeIcon icon={faDashboard} />
+          <span style={{ display: hover ? "flex" : "none" }}>
+            Dashboard
+          </span>
+        </div>
         <div className="collapsible-item" onClick={toggleExpandedData}>
             <div className="collapsible-header">
               <FontAwesomeIcon icon={faBusinessTime} />
@@ -45,14 +53,15 @@ const Sidebar = () => {
               </span>
             </div>
             {expandedData && hover &&(
+              console.log("expandedData", expandedData),
               <div className="collapsible-body">
-                <div className="collapsible-body-item" onClick={toggleExpandedData} >
+                <div className="collapsible-body-item">
                   <FontAwesomeIcon icon={faBox} />
                   <span style={{ display: hover ? "flex" : "none" }}>
                     Formulario
                   </span>
                 </div>
-                <div className="collapsible-body-item" onClick={toggleExpandedData}>
+                <div className="collapsible-body-item">
                   <FontAwesomeIcon icon={faBoxOpen} />
                   <span style={{ display: hover ? "flex" : "none" }}>
                     Hoja de vida

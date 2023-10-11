@@ -21,21 +21,21 @@ const Header = () => {
   return (
     <div
       className="header-container"
-      style={{ height: openHeader ? "fit-content" : "50px" }}
+      style={{ height: openHeader ? "50px" : "fit-content" }}
     >
       <FontAwesomeIcon
         icon={faCaretDown}
         title="Desplegar encabezado"
         onClick={changeOpenHeader}
-        style={{ display: openHeader ? "block" : "none" }}
+        style={{ display: openHeader ? "none" : "block" }}
       />
       <FontAwesomeIcon
         icon={faCaretUp}
         title="Desplegar encabezado"
         onClick={changeOpenHeader}
-        style={{ display: openHeader ? "none" : "block" }}
+        style={{ display: openHeader ? "block" : "none" }}
       />
-      <div className="header" style={{ display: openHeader ? "none" : "flex" }}>
+      <div className="header" style={{ display: openHeader ? "flex" : "none" }}>
         <div className="header-title">
           <h1>Mi nombre</h1>
         </div>
